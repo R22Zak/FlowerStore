@@ -1,4 +1,10 @@
-package flower.store;
+/**
+* class FlowerBucketTest
+*/
+package flower.store; // no violation
+/*
+* yea
+*/
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,11 +21,17 @@ public class FlowerBucketTest {
 
     @BeforeEach
     public void init() {
+          /**
+   * Some description here.
+   */
         flowerBucket = new FlowerBucket();
     }
 
     @Test
     public void testPrice() {
+          /**
+   * Some description here.
+   */
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
         Flower flower = new Rose();

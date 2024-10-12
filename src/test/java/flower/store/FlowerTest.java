@@ -1,10 +1,14 @@
-package flower.store;
+/**
+* class FlowerTest
+*/
+package flower.store; // no violation
+/*
+* yea
+*/
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.Random;
-
 import org.junit.jupiter.api.Assertions;
 
 public class FlowerTest {
@@ -14,11 +18,17 @@ public class FlowerTest {
 
     @BeforeEach
     public void init() {
+          /**
+   * Some description here.
+   */
         flower = new Flower();
     }
 
     @Test
     public void testPrice() {
+          /**
+   * Some description here.
+   */
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         flower.setPrice(price);
         Assertions.assertEquals(price, flower.getPrice());
@@ -26,6 +36,9 @@ public class FlowerTest {
 
     @Test
     public void testColor() {
+          /**
+   * Some description here.
+   */
         FlowerColor color = FlowerColor.RED;
         flower.setColor(color);
         Assertions.assertEquals("#FF0000", flower.getColor());

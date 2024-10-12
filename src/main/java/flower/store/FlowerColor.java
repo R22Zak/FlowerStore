@@ -1,4 +1,10 @@
-package flower.store;
+/**
+* enum FlowerColor
+*/
+package flower.store; // no violation
+/*
+* yea
+*/
 
 public enum FlowerColor {
     /**
@@ -13,6 +19,9 @@ public enum FlowerColor {
 
     @Override
     public String toString() {
+          /**
+   * Some description here.
+   */
         return stringRepresentation;
     }
 }
