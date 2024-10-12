@@ -15,12 +15,16 @@ public class Store {
     }
 
 
-    public List<Flower> search(FlowerType flowerType, FlowerColor color, Double maxPrice) {
+    public List<Flower> search(FlowerType flowerType, FlowerColor color
+, Double maxPrice) {
 
         return flowers.stream()
-                .filter(flower -> flower.getFlowerType() == flowerType) 
-                .filter(flower -> color == null || flower.getColor().equals(color.toString())) 
-                .filter(flower -> maxPrice == null || flower.getPrice() <= maxPrice) 
+                .filter(flower -> flower.getFlowerType() 
+== flowerType) 
+                .filter(flower -> color == null 
+|| flower.getColor().equals(color.toString())) 
+                .filter(flower -> maxPrice == null 
+|| flower.getPrice() <= maxPrice) 
                 .collect(Collectors.toList());
     }
 }
