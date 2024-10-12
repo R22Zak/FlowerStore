@@ -3,9 +3,8 @@ package flower.store;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
 @Setter
+
 public class Flower {
     @Getter
     private double sepalLength;
