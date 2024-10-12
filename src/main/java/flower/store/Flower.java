@@ -1,5 +1,10 @@
-package flower.store;
-
+/**
+* class Flower
+*/
+package flower.store; // no violation
+/*
+* yea
+*/
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,6 +12,9 @@ import lombok.Setter;
 
 public class Flower {
     @Getter
+    /**
+   * Some description here
+   */
     private double sepalLength;
     private FlowerColor color;
     @Getter
@@ -15,6 +23,9 @@ public class Flower {
     private FlowerType flowerType;
 
     public String getColor() {
+          /**
+   * Some description here.
+   */
         return color.toString();
     }
 }

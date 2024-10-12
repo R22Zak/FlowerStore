@@ -1,38 +1,50 @@
-package flower.store;
+/**
+* class StoreTest
+*/
+package flower.store; // no violation
+/*
+* yea
+*/
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class StoreTest {
- 
+      /**
+   * Some description here.
+   */
+    public static final double PRICE = 10.0;
+    public static final double LENGHT = 5.5;
     @Test
     public void testSearchRose() {
+          /**
+   * Some description here.
+   */
         Store flowerStore = new Store();
         Flower flowerRose = new Flower();
-        double price = 10.0;
-        double lenght = 5.5;
         flowerRose.setFlowerType(FlowerType.ROSE);
         flowerRose.setColor(FlowerColor.RED);
-        flowerRose.setSepalLength(lenght);
-        flowerRose.setPrice(price);
+        flowerRose.setSepalLength(LENGHT);
+        flowerRose.setPrice(PRICE);
         flowerStore.addFlower(flowerRose);
         Assertions.assertEquals(flowerRose, flowerStore.search(FlowerType.ROSE,
-FlowerColor.RED, 10.0).get(0));
+FlowerColor.RED, PRICE).get(0));
     }
 
     @Test
     public void testSearchTulp() {
+          /**
+   * Some description here.
+   */
         Store flowerStore = new Store();
         Flower flowerTulp = new Flower();
-        double price = 8.0;
-        double lenght = 6.0;
         flowerTulp.setFlowerType(FlowerType.TULIP);
         flowerTulp.setColor(FlowerColor.BLUE);
-        flowerTulp.setSepalLength(lenght);
-        flowerTulp.setPrice(price);
+        flowerTulp.setSepalLength(LENGHT);
+        flowerTulp.setPrice(PRICE);
         flowerStore.addFlower(flowerTulp);
         Assertions.assertEquals(flowerTulp, flowerStore.search(FlowerType.TULIP,
-FlowerColor.BLUE, 10.0).get(0));
+FlowerColor.BLUE, PRICE).get(0));
     }
 
 }
