@@ -6,27 +6,33 @@ import org.junit.jupiter.api.Test;
 public class StoreTest {
  
     @Test
-    public void testsearch1() {
+    public void testSearchRose() {
         Store flowerStore = new Store();
-        Flower f1 = new Flower();
-        f1.setFlowerType(FlowerType.ROSE);
-        f1.setColor(FlowerColor.RED);
-        f1.setSepalLength(5.5);
-        f1.setPrice(10);
-        flowerStore.addFlower(f1);
-        Assertions.assertEquals(f1,flowerStore.search(FlowerType.ROSE,FlowerColor.RED,10.0).get(0));
+        Flower flowerRose = new Flower();
+        double price = 10.0;
+        double lenght = 5.5;
+        flowerRose.setFlowerType(FlowerType.ROSE);
+        flowerRose.setColor(FlowerColor.RED);
+        flowerRose.setSepalLength(lenght);
+        flowerRose.setPrice(price);
+        flowerStore.addFlower(flowerRose);
+        Assertions.assertEquals(flowerRose, flowerStore.search(FlowerType.ROSE,
+FlowerColor.RED, 10.0).get(0));
     }
 
     @Test
-    public void testsearch2() {
+    public void testSearchTulp() {
         Store flowerStore = new Store();
-        Flower f2 = new Flower();
-        f2.setFlowerType(FlowerType.TULIP);
-        f2.setColor(FlowerColor.BLUE);
-        f2.setSepalLength(6.0);
-        f2.setPrice(8);
-        flowerStore.addFlower(f2);
-        Assertions.assertEquals(f2,flowerStore.search(FlowerType.TULIP,FlowerColor.BLUE,10.0).get(0));
+        Flower flowerTulp = new Flower();
+        double price = 8.0;
+        double lenght = 6.0;
+        flowerTulp.setFlowerType(FlowerType.TULIP);
+        flowerTulp.setColor(FlowerColor.BLUE);
+        flowerTulp.setSepalLength(lenght);
+        flowerTulp.setPrice(price);
+        flowerStore.addFlower(flowerTulp);
+        Assertions.assertEquals(flowerTulp, flowerStore.search(FlowerType.TULIP,
+FlowerColor.BLUE, 10.0).get(0));
     }
 
 }
